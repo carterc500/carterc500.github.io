@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Threat Intelligence Template
-subtitle: Template
+title: REMCOS RAT
+subtitle: REMCOS RAT Writeup
 tags: [threat-intel]
 comments: true
 mathjax: true
