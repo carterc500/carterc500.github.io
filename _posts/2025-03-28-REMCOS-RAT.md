@@ -6,7 +6,6 @@ tags: [threat-intel]
 comments: true
 mathjax: true
 ---
-https://kravensecurity.com/cyber-threat-intelligence-report-template/
 
 ## Executive Summary
  
@@ -25,9 +24,26 @@ The main result of this analysis was improvement of my own skills in malware ana
 
 ## Indicators of Compromise
 
+
+Main indicator of compromise is successful communication with httx://104[.]168[.]7[.]32 where the new_image.jpg is downloaded. Further evidence 
+--TODO-- paste[.]ee and file hash
+
 #### Endpoint Artifacts
+- Original JS file - SHA256 971ae4e4aa24029751d0c76ece96dec196d05b47e8fb218aa87ecd3ccd8513dff  
+- new_image.jpg - SHA256 cd5d382270649f01f85f42beaff153497af774ae6e623407c56e694621323fc2  
+--TODO-- Copy over VirusTotal report https://www.virustotal.com/gui/file/cd5d382270649f01f85f42beaff153497af774ae6e623407c56e694621323fc2/behavior  
+
+| Artifcat | Type | Description | Tactic |
+| :------ |:--- | :--- | :--- |
+| Five | Six | Four | sixty |
+| Ten | Eleven | Nine | 
+| Seven | Eight | Six |
+| Two | Three | One |
+
 
 #### Network Artifacts
+- hxxp://104[.]168[.]7[.]32  
+- hxxp://paste.ee/d/svCzpzA6 (23[.]186[.]113[.]60)  
 
 #### Malware
 
