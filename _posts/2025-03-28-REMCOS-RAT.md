@@ -22,14 +22,11 @@ In terms of the victim of this attack, that is unknown as the sample was downloa
 The main result of this analysis was improvement of my own skills in malware analysis and getting experience with multiple different attack techniques. Additionally this analysis shows the importance of restricting user access to least priviledge, not trusting even generally "safe" file types such as images, and blocking access (specifically download access) to unknown IPs/destinations. 
 ## Assessment
 
+--TODO--
+
 ## Indicators of Compromise
 
-
-Main indicator of compromise is successful communication with httx://104[.]168[.]7[.]32 where the new_image.jpg is downloaded. Further evidence 
---TODO-- paste[.]ee and file hash
-
 #### Endpoint Artifacts 
---TODO-- Copy over VirusTotal report https://www.virustotal.com/gui/file/cd5d382270649f01f85f42beaff153497af774ae6e623407c56e694621323fc2/behavior  and https://www.virustotal.com/gui/url/faa25f04976015b3e97766ceedc652c2a89584c90aafc869f9d4ee923c280a88 
 
 | Artifact | Type | Description | Tactic | Links |
 | :------ |:--- | :--- | :--- |
