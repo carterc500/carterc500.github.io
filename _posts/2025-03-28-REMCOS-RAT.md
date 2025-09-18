@@ -19,10 +19,25 @@ This is intended to be mainly for the purposes of documenting an instance of mal
 In terms of the victim of this attack, that is unknown as the sample was downloaded from a public database which does not contain context of who provided the sample. Due to this lack of information, it also makes it harder to tell who the possible attacker could be as motivation can't be inferred.  
 --TODO-- Possible attestation?  
   
-The main result of this analysis was improvement of my own skills in malware analysis and getting experience with multiple different attack techniques. Additionally this analysis shows the importance of restricting user access to least priviledge, not trusting even generally "safe" file types such as images, and blocking access (specifically download access) to unknown IPs/destinations. 
+The main result of this analysis was improvement of my own skills in malware analysis and getting experience with multiple different attack techniques. Additionally this analysis shows the importance of restricting user access to least priviledge, not trusting even generally "safe" file types such as images, and blocking access (specifically download access) to unknown IPs/destinations. Also one big important lesson that came out of this is in the future when I do these types of excersises is I need to complete them quickly since the command and control servers can be taken down quickly and so I lose access to be able to get samples after.
 ## Assessment
+--TODO-- Add in Raw Code image and talk more in depth about walking through the code and why the characters were replaced.  
 
---TODO--
+
+Retrieved a sample of malware from [MalwareBazaar](https://bazaar.abuse.ch/) tagged as being a Remcos RAT (SHA256:971ae4e4aa24029751d0c76ece96dec196d05b47e8fb218aa87ecd3ccd8513dff). Analysis of the sample took place on a virtual machine running FlareVM.  
+  
+Began analysis by opening the JavaScript file with VisaulStudio code to start static analysis after it was verified that it was not an executable.  
+![](/assets/img/file_type.png)  
+
+On opening the file saw that there were recurring sets of non standard characters found throughout the file. Found and replaced each occurance of the random characters with an empty string until all that was left is seen below. The random set of characters can be seen on lines 2 and 3 highlighted in the yellow box.   
+![](/assets/img/code_deobfuscated.png)  
+With the code fully deobfuscated as seen in:  
+![](/assets/img/true_code.png)  
+
+Initially ran the URL through hxxp://paste[.]ee/d/svCzpzA6 [HybridAnalysis](https://hybrid-analysis.com/sample/0be185a53ab1c55478115df977406722afb37fa6e81dfbf81610d9acd32ce1f8) to see what it detected. As seen in the report the output was detected as malicious and so used a proxy service to retrieve the response from the URL. 
+![](/assets/img/url_output.png)  
+
+As seen once again the response is heavily obfuscated with this time instead of random characters being
 
 ## Indicators of Compromise
 
@@ -46,16 +61,3 @@ The main result of this analysis was improvement of my own skills in malware ana
 | Malware | Hash Type | File Hash | Description | Malware Analysis Report | Kill Chain Stage |
 | :------ |:----- | :--- | :--- | :--- | :----- |
 |Remcos RAT | Unknown | Unkown | Would be downloaded as new_image.jpg but by time analysis was ongoing URL hosting the Malware was taken down and sample could not be retrieved | N/A | Command & Control |
-
-#### Common Vulnerabilities & Exposures (CVEs)
-
---TODO-- Not Applicable?? Delete section?
-
-| CVE Number | CVSS Score | Patch Available (Y or N) | Remediation |
-| :------ |:----- | :--- | :--- |
-
-## MITRE ATT&CK Techniques
-
-## Detection Oportunities
-
-## Appendices
