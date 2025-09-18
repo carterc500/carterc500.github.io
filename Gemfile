@@ -5,3 +5,5 @@ source "https://rubygems.org"
 gemspec
 gem 'tzinfo'
 gem 'tzinfo-data'
+gem 'bigdecimal'
+gem 'logger'
